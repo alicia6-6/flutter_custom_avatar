@@ -7,6 +7,7 @@
 
 <br />
 <div align="center">
+<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="400"/>
   <h3 align="center">Flutter 아바타 커스터마이징 프로젝트</h3>
 
   <p align="center">
@@ -112,6 +113,7 @@ flutter_custom_avatar/
 
 <br />
 <div align="center">
+<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="400"/>
   <h3 align="center">Flutter Avatar Customization Project</h3>
 
   <p align="center">
