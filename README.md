@@ -1,4 +1,6 @@
-<p align="center"><h3><a href="#readme-top-en">Click here for English README</a></h3></p>
+<div align="center">
+  <h3><a href="#readme-top-en">Click here for English README</a></h3>
+</div>
 <a id="readme-top"></a>
 
 # Flutter Custom Avatar
@@ -52,6 +54,12 @@ flutter_custom_avatar/
 * **이미지 확대**: 64x64 픽셀의 작은 이미지를 `Transform.scale`을 사용하여 4배 확대하여 픽셀 아트의 느낌을 살렸습니다.
 * **색상 관리**: 각 파츠의 색상 팔레트는 정적 리스트로 정의되며, 사용자의 선택에 따라 상태 변수가 업데이트됩니다.
 * **애니메이션**: `Timer.periodic`을 사용하여 800ms 간격으로 몸통 이미지를 변경합니다. 이 방식은 `ColorFiltered`와 충돌하는 투명도 애니메이션 문제를 해결합니다.
+
+<p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
+
+## 애셋 (Assets)
+
+이 프로젝트에 사용된 모든 픽셀 아트 이미지(아바타 파츠 등)는 이 프로젝트의 기여자(alicia6-6)가 직접 제작했습니다.
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
@@ -138,6 +146,12 @@ This project is centered around the `CustomAvatar` class, which is a `StatefulWi
 * **Image Scaling**: The original 64x64 pixel images are enlarged by a factor of 4 using `Transform.scale` to maintain the pixel art aesthetic.
 * **Color Management**: Color palettes for each part are defined as static lists, and a state variable is updated based on user selection.
 * **Animation**: A `Timer.periodic` is used to change the body image every 800ms. This approach resolves the flickering issues caused by opacity animations conflicting with `ColorFiltered`.
+
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
+
+## Assets
+
+All pixel art images (avatar parts, etc.) used in this project were created by the project contributor (alicia6-6).
 
 <p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
