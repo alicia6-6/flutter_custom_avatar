@@ -48,9 +48,9 @@ flutter_custom_avatar/
 
 이 프로젝트는 `StatefulWidget`인 `CustomAvatar` 클래스를 중심으로 구성됩니다. 아바타의 각 파츠는 `Stack` 위젯 위에 이미지로 겹쳐 쌓아 표현되며, 사용자가 선택한 색상은 `ColorFiltered` 위젯을 통해 이미지에 적용됩니다.
 
--   **이미지 확대**: 64x64 픽셀의 작은 이미지를 `Transform.scale`을 사용하여 4배 확대하여 픽셀 아트의 느낌을 살렸습니다.
--   **색상 관리**: 각 파츠의 색상 팔레트는 정적 리스트로 정의되며, 사용자의 선택에 따라 상태 변수가 업데이트됩니다.
--   **애니메이션**: `Timer.periodic`을 사용하여 800ms 간격으로 몸통 이미지를 변경합니다. 이 방식은 `ColorFiltered`와 충돌하는 투명도 애니메이션 문제를 해결합니다.
+* **이미지 확대**: 64x64 픽셀의 작은 이미지를 `Transform.scale`을 사용하여 4배 확대하여 픽셀 아트의 느낌을 살렸습니다.
+* **색상 관리**: 각 파츠의 색상 팔레트는 정적 리스트로 정의되며, 사용자의 선택에 따라 상태 변수가 업데이트됩니다.
+* **애니메이션**: `Timer.periodic`을 사용하여 800ms 간격으로 몸통 이미지를 변경합니다. 이 방식은 `ColorFiltered`와 충돌하는 투명도 애니메이션 문제를 해결합니다.
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
@@ -69,6 +69,22 @@ flutter_custom_avatar/
 
 4.  터미널에서 `flutter pub get` 명령어를 실행합니다.
 5.  `lib/main.dart` 파일을 열고 프로젝트를 실행합니다.
+
+<p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
+
+## 기여자
+
+기여는 오픈 소스 커뮤니티를 배우고, 영감을 주고, 창조하는 놀라운 장소로 만듭니다. 여러분의 모든 기여는 크게 감사드립니다.
+
+이 프로젝트에 기여한 사람들은 다음과 같습니다.
+
+[<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="기여자 이미지" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
+
+<p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
+
+## 라이선스
+
+이 프로젝트는 MIT 라이선스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
@@ -122,9 +138,9 @@ flutter_custom_avatar/
 
 This project is centered around the `CustomAvatar` class, which is a `StatefulWidget`. The avatar's parts are rendered by stacking images on a `Stack` widget, and user-selected colors are applied to each image using a `ColorFiltered` widget.
 
--   **Image Scaling**: The original 64x64 pixel images are enlarged by a factor of 4 using `Transform.scale` to maintain the pixel art aesthetic.
--   **Color Management**: Color palettes for each part are defined as static lists, and a state variable is updated based on user selection.
--   **Animation**: A `Timer.periodic` is used to change the body image every 800ms. This approach resolves the flickering issues caused by opacity animations conflicting with `ColorFiltered`.
+* **Image Scaling**: The original 64x64 pixel images are enlarged by a factor of 4 using `Transform.scale` to maintain the pixel art aesthetic.
+* **Color Management**: Color palettes for each part are defined as static lists, and a state variable is updated based on user selection.
+* **Animation**: A `Timer.periodic` is used to change the body image every 800ms. This approach resolves the flickering issues caused by opacity animations conflicting with `ColorFiltered`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,5 +159,21 @@ This project is centered around the `CustomAvatar` class, which is a `StatefulWi
 
 4.  Run `flutter pub get` in your terminal.
 5.  Open `lib/main.dart` and run the project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributors
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Here are the people who have contributed to this project:
+
+[<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="Contributors image" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+This project is distributed under the MIT License. See the `LICENSE` file for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
