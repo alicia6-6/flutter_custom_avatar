@@ -28,37 +28,6 @@
 `lib/` 폴더 내에 코드를 기능별로 분리하여 관리합니다.
 
 ```
-Markdown
-
-<div align="center">
-  <h3><a href="#readme-top-en">Click here for English README</a></h3>
-</div>
-<a id="readme-top"></a>
-
-# Flutter Custom Avatar
-
-<br />
-<div align="center">
-  <h3 align="center">Flutter 아바타 커스터마이징 예제 프로젝트</h3>
-
-  <p align="center">
-    Flutter로 픽셀 아트 아바타를 커스터마이징하고 애니메이션을 적용하는 예제입니다.
-    <br />
-  </p>
-</div>
-
-## 주요 기능
-
-* **아바타 커스터마이징**: 아바타의 각 파츠(몸, 머리, 눈 등)별로 원하는 색상을 선택할 수 있습니다.
-* **프레임 애니메이션**: 몸통 부분이 두 이미지 사이를 주기적으로 전환하며 자연스러운 '숨쉬는' 애니메이션 효과를 연출합니다.
-* **성능 최적화**: `Timer.periodic`을 사용한 직접적인 이미지 교체 방식으로, `ColorFiltered` 위젯과 애니메이션 위젯의 충돌 문제를 해결하여 깜빡임 없이 부드러운 전환을 구현했습니다.
-
-<p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
-
-## 프로젝트 구조
-
-`lib/` 폴더 내에 코드를 기능별로 분리하여 관리합니다.
-
 flutter_custom_avatar/
 ├── android/
 ├── ios/
@@ -133,8 +102,8 @@ flutter_custom_avatar/
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
-<br />
 ---
+
 <br />
 
 <a id="readme-top-en"></a>
