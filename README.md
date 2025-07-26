@@ -1,3 +1,4 @@
+<p align="right">(<a href="#readme-top-en">Click here for English README</a>)</p>
 <a id="readme-top"></a>
 
 # Flutter Custom Avatar
@@ -74,10 +75,6 @@ flutter_custom_avatar/
 
 ## 기여자
 
-기여는 오픈 소스 커뮤니티를 배우고, 영감을 주고, 창조하는 놀라운 장소로 만듭니다. 여러분의 모든 기여는 크게 감사드립니다.
-
-이 프로젝트에 기여한 사람들은 다음과 같습니다.
-
 [<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="기여자 이미지" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
@@ -88,7 +85,7 @@ flutter_custom_avatar/
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
-<a id="readme-top"></a>
+<a id="readme-top-en"></a>
 
 # Flutter Custom Avatar
 
@@ -108,7 +105,7 @@ flutter_custom_avatar/
 * **Frame-by-Frame Animation**: The body animates by cycling between two images, creating a subtle 'breathing' effect.
 * **Performance Optimization**: The project uses a direct image-swapping method with `Timer.periodic`, which resolves flickering issues caused by opacity animations conflicting with the `ColorFiltered` widget.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
 ## Project Structure
 
@@ -132,7 +129,7 @@ flutter_custom_avatar/
 └── README.md
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
 ## Code Explanation
 
@@ -142,7 +139,7 @@ This project is centered around the `CustomAvatar` class, which is a `StatefulWi
 * **Color Management**: Color palettes for each part are defined as static lists, and a state variable is updated based on user selection.
 * **Animation**: A `Timer.periodic` is used to change the body image every 800ms. This approach resolves the flickering issues caused by opacity animations conflicting with `ColorFiltered`.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
 ## Getting Started
 
@@ -160,20 +157,16 @@ This project is centered around the `CustomAvatar` class, which is a `StatefulWi
 4.  Run `flutter pub get` in your terminal.
 5.  Open `lib/main.dart` and run the project.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
 ## Contributors
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-Here are the people who have contributed to this project:
-
 [<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="Contributors image" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
 ## License
 
 This project is distributed under the MIT License. See the `LICENSE` file for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
