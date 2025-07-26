@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 void main() {
   runApp(const MyApp());
@@ -7,116 +8,244 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('아바타 커스터마이징')),
+        body: const CustomAvatar(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+class CustomAvatar extends StatefulWidget {
+  const CustomAvatar({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<CustomAvatar> createState() => _CustomAvatarState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _CustomAvatarState extends State<CustomAvatar> {
+  // 색상 팔레트 (이전과 동일)
+  static const List<Color> backgroundColors = [
+    Color(0xFFE8E2D7),
+    Colors.blueGrey,
+    Colors.green,
+    Colors.pink,
+    Colors.black,
+  ];
+  static const List<Color> bodyColors = [
+    Color(0xFFFEF0D4),
+    Color(0xFFE4A281),
+    Color(0xFF7D4E3A),
+    Color(0xFFC76C89),
+    Color(0xFFD8D8D8),
+  ];
+  static const List<Color> hairColors = [
+    Colors.black,
+    Colors.brown,
+    Colors.orange,
+    Color(0xFFE388A9),
+    Color(0xFF7DD2D2),
+  ];
+  static const List<Color> eyesColors = [
+    Colors.black,
+    Color(0xFF00A2E8),
+    Color(0xFF22B14C),
+    Color(0xFFA349A4),
+    Color(0xFFED1C24),
+  ];
+  static const List<Color> mouthColors = [
+    Colors.white,
+    Colors.pink,
+    Color(0xFF99611D),
+    Color(0xFFFF7F27),
+    Color(0xFFC70039),
+  ];
+  static const List<Color> topColors = [
+    Colors.white,
+    Colors.black,
+    Colors.red,
+    Colors.blue,
+    Colors.yellow,
+  ];
+  static const List<Color> bottomColors = [
+    Colors.white,
+    Colors.black,
+    Colors.green,
+    Colors.blueGrey,
+    Colors.purple,
+  ];
 
-  void _incrementCounter() {
+  // 현재 선택된 색상 (이전과 동일)
+  Color _selectedBackgroundColor = backgroundColors[0];
+  Color _selectedBodyColor = bodyColors[0];
+  Color _selectedHairColor = hairColors[0];
+  Color _selectedEyesColor = eyesColors[0];
+  Color _selectedMouthColor = mouthColors[0];
+  Color _selectedTopColor = topColors[0];
+  Color _selectedBottomColor = bottomColors[0];
+
+  // 프레임 애니메이션 관련 변수 (이전과 동일)
+  final List<String> _bodyFrames = [
+    'assets/images/body_1.png',
+    'assets/images/body_2.png',
+  ];
+  int _currentFrameIndex = 0;
+  late Timer _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    // 50ms마다 이미지를 전환하여 깜빡임 없이 부드러운 느낌을 줌
+    _timer = Timer.periodic(const Duration(milliseconds: 800), (timer) {
+      _animate();
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  void _animate() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
+      _currentFrameIndex = (_currentFrameIndex + 1) % _bodyFrames.length;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+    return Column(
+      children: [
+        Center(
+          child: SizedBox(
+            width: 256,
+            height: 256,
+            child: Stack(
+              children: [
+                Container(color: _selectedBackgroundColor),
+                // AnimatedSwitcher를 제거하고 _currentFrameIndex로 직접 이미지 경로를 변경
+                _buildCharacterPart(
+                  _bodyFrames[_currentFrameIndex],
+                  _selectedBodyColor,
+                ),
+                _buildCharacterPart('assets/images/top.png', _selectedTopColor),
+                _buildCharacterPart(
+                  'assets/images/bottom.png',
+                  _selectedBottomColor,
+                ),
+                _buildCharacterPart(
+                  'assets/images/mouth.png',
+                  _selectedMouthColor,
+                ),
+                _buildCharacterPartWithoutFilter(
+                  'assets/images/eyes_background.png',
+                ),
+                _buildCharacterPart(
+                  'assets/images/eyes.png',
+                  _selectedEyesColor,
+                ),
+                _buildCharacterPart(
+                  'assets/images/hair.png',
+                  _selectedHairColor,
+                ),
+              ],
             ),
-          ],
+          ),
         ),
+        const SizedBox(height: 30),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _buildColorSelector('배경', backgroundColors, (color) {
+                  setState(() => _selectedBackgroundColor = color);
+                }),
+                _buildColorSelector('피부', bodyColors, (color) {
+                  setState(() => _selectedBodyColor = color);
+                }),
+                _buildColorSelector('머리', hairColors, (color) {
+                  setState(() => _selectedHairColor = color);
+                }),
+                _buildColorSelector('눈', eyesColors, (color) {
+                  setState(() => _selectedEyesColor = color);
+                }),
+                _buildColorSelector('입', mouthColors, (color) {
+                  setState(() => _selectedMouthColor = color);
+                }),
+                _buildColorSelector('상의', topColors, (color) {
+                  setState(() => _selectedTopColor = color);
+                }),
+                _buildColorSelector('하의', bottomColors, (color) {
+                  setState(() => _selectedBottomColor = color);
+                }),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // 키가 필요 없는 일반 캐릭터 파츠 빌더 함수
+  Widget _buildCharacterPart(String assetPath, Color color) {
+    return Transform.scale(
+      scale: 4,
+      alignment: Alignment.topLeft,
+      child: ColorFiltered(
+        colorFilter: ColorFilter.mode(color, BlendMode.modulate),
+        child: Image.asset(assetPath, filterQuality: FilterQuality.none),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  // 색상 필터가 필요 없는 캐릭터 파츠 빌더 함수
+  Widget _buildCharacterPartWithoutFilter(String assetPath) {
+    return Transform.scale(
+      scale: 4,
+      alignment: Alignment.topLeft,
+      child: Image.asset(assetPath, filterQuality: FilterQuality.none),
+    );
+  }
+
+  Widget _buildColorSelector(
+    String part,
+    List<Color> colors,
+    Function(Color) onColorSelected,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '$part 색상',
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:
+                colors.map((color) {
+                  return GestureDetector(
+                    onTap: () => onColorSelected(color),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: color,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.grey, width: 2),
+                      ),
+                    ),
+                  );
+                }).toList(),
+          ),
+        ],
+      ),
     );
   }
 }
