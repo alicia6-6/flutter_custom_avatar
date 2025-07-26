@@ -1,4 +1,4 @@
-<p align="right">(<a href="#readme-top-en">Click here for English README</a>)</p>
+<p align="center"><h3><a href="#readme-top-en">Click here for English README</a></h3></p>
 <a id="readme-top"></a>
 
 # Flutter Custom Avatar
