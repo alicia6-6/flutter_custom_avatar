@@ -22,6 +22,7 @@
 
 ## 프로젝트 구조
 
+```
 flutter_custom_avatar/
 ├── android/
 ├── ios/
@@ -39,6 +40,7 @@ flutter_custom_avatar/
 │       └── hair.png
 ├── pubspec.yaml              # 의존성 및 에셋(assets) 설정 파일
 └── README.md
+```
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
@@ -94,6 +96,7 @@ flutter_custom_avatar/
 
 ## Project Structure
 
+```
 flutter_custom_avatar/
 ├── android/
 ├── ios/
@@ -111,6 +114,7 @@ flutter_custom_avatar/
 │       └── hair.png
 ├── pubspec.yaml              # Dependencies and assets configuration
 └── README.md
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
