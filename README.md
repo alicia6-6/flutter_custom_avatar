@@ -90,11 +90,6 @@ flutter_custom_avatar/
 4.  터미널에서 `flutter pub get` 명령어를 실행합니다.
 5.  `lib/main.dart` 파일을 열고 프로젝트를 실행합니다.
 
-<p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
-
-## 기여자
-
-[<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="기여자 이미지" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
 
@@ -103,6 +98,8 @@ flutter_custom_avatar/
 이 프로젝트는 MIT 라이선스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
 
 <p align="right">(<a href="#readme-top">맨 위로 돌아가기</a>)</p>
+
+<br />
 
 ---
 
@@ -194,12 +191,6 @@ All pixel art images (avatar parts, etc.) used in this project were created by t
 
 4.  Run `flutter pub get` in your terminal.
 5.  Open `lib/main.dart` and run the project.
-
-<p align="right">(<a href="#readme-top-en">back to top</a>)</p>
-
-## Contributors
-
-[<a href="https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors"><img src="https://contrib.rocks/image?repo=alicia6-6/flutter_custom_avatar" alt="Contributors image" /></a>](https://github.com/alicia6-6/flutter_custom_avatar/graphs/contributors)
 
 <p align="right">(<a href="#readme-top-en">back to top</a>)</p>
 
