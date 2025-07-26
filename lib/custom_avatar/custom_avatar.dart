@@ -71,7 +71,16 @@ class _CustomAvatarState extends State<CustomAvatar> {
             height: 256,
             child: Stack(
               children: [
-                Container(color: _selectedBackgroundColor),
+                // Container(color: _selectedBackgroundColor),
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.white, _selectedBackgroundColor],
+                    ),
+                  ),
+                ),
                 CharacterPart(
                   assetPath: _bodyFrames[_currentFrameIndex],
                   color: _selectedBodyColor,
