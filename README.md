@@ -7,7 +7,7 @@
 
 <br />
 <div align="center">
-<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="400"/>
+<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="200"/>
   <h3 align="center">Flutter 아바타 커스터마이징 프로젝트</h3>
 
   <p align="center">
@@ -19,6 +19,7 @@
 ## 주요 기능
 
 * **아바타 커스터마이징**: 아바타의 각 파츠(몸, 머리, 눈 등)별로 원하는 색상을 선택할 수 있습니다.
+* **픽셀 아트 스케일링**: 64x64 픽셀의 픽셀 아트 에셋을 `Transform.scale`을 사용하여 4배 확대하여, 픽셀 아트의 느낌을 유지하면서도 화면에 적절한 크기로 표시합니다.
 * **프레임 애니메이션**: 몸통 부분이 두 이미지 사이를 주기적으로 전환하며 자연스러운 '숨쉬는' 애니메이션 효과를 연출합니다.
 * **성능 최적화**: `Timer.periodic`을 사용한 직접적인 이미지 교체 방식으로, `ColorFiltered` 위젯과 애니메이션 위젯의 충돌 문제를 해결하여 깜빡임 없이 부드러운 전환을 구현했습니다.
 
@@ -113,7 +114,7 @@ flutter_custom_avatar/
 
 <br />
 <div align="center">
-<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="400"/>
+<img src="demo.gif" alt="Flutter Custom Avatar Demo" width="200"/>
   <h3 align="center">Flutter Avatar Customization Project</h3>
 
   <p align="center">
@@ -125,6 +126,7 @@ flutter_custom_avatar/
 ## Features
 
 * **Avatar Customization**: Users can select and apply different colors to each part of the avatar (body, hair, eyes, etc.).
+* **Pixel Art Scaling**: The 64x64 pixel art assets are enlarged by a factor of 4 using Transform.scale to maintain the pixel art aesthetic while displaying them at a suitable size on the screen.
 * **Frame-by-Frame Animation**: The body animates by cycling between two images, creating a subtle 'breathing' effect.
 * **Performance Optimization**: The project uses a direct image-swapping method with `Timer.periodic`, which resolves flickering issues caused by opacity animations conflicting with the `ColorFiltered` widget.
 
